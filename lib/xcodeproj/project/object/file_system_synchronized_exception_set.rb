@@ -35,7 +35,7 @@ module Xcodeproj
         attribute :platform_filters_by_relative_path, Hash
 
         def display_name
-          "Exceptions for \"#{GroupableHelper.parent(self).display_name}\" folder in \"#{target.name}\" target"
+          PBXFileSystemSynchronizedBuildFileExceptionSet.isa
         end
       end
 

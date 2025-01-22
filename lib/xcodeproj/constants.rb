@@ -61,6 +61,8 @@ module Xcodeproj
         XCConfigurationList
         PBXContainerItemProxy
         PBXFileReference
+        PBXFileSystemSynchronizedBuildFileExceptionSet
+        PBXFileSystemSynchronizedRootGroup
         PBXGroup
         PBXProject
         PBXTargetDependency

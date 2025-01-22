@@ -90,17 +90,8 @@ module Xcodeproj
 
         def to_hash_as(method = :to_hash)
           hash_as = super
-          if !hash_as['packageReferences'].nil? && hash_as['packageReferences'].empty?
-            hash_as.delete('packageReferences') if !hash_as['packageReferences'].nil? && hash_as['packageReferences'].empty?
-          end
+          hash_as.delete('packageReferences') if hash_as['packageReferences']&.empty?
           hash_as
-        end
-
-        def to_ascii_plist
-          plist = super
-          plist.value.delete('projectReferences') if plist.value['projectReferences'].empty?
-          plist.value.delete('packageReferences') if !plist.value['packageReferences'].nil? && plist.value['packageReferences'].empty?
-          plist
         end
       end
     end

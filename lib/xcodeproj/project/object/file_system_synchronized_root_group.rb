@@ -68,6 +68,13 @@ module Xcodeproj
           return path if path
           super
         end
+
+        def to_hash_as(method = :to_hash)
+          hash_as = super
+          hash_as.delete('exceptions') if hash_as['exceptions']&.empty?
+          hash_as
+        end
+      end
       end
     end
   end

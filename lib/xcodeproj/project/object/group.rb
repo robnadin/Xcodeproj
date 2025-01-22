@@ -11,7 +11,7 @@ module Xcodeproj
       class PBXGroup < AbstractObject
         # @!group Attributes
 
-        # @return [ObjectList<PBXGroup, PBXFileReference>]
+        # @return [ObjectList<PBXGroup, PBXFileReference, PBXReferenceProxy, PBXFileSystemSynchronizedRootGroup>]
         #         the objects contained by the group.
         #
         has_many :children, [PBXGroup, PBXFileReference, PBXReferenceProxy, PBXFileSystemSynchronizedRootGroup]
